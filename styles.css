@@ -22,14 +22,28 @@ body {
   height: 100vh;
 }
 
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+img {
+  width: 100%;
+}
+
 h1,
 h2,
 h3 {
+  margin: 0;
   font-family: "Fraunces", serif;
+  line-height: 4rem;
 }
 
 h1 {
   font-size: 4rem;
+  color: black;
 }
 
 h2 {
@@ -48,13 +62,69 @@ p {
   color: white;
   cursor: pointer;
   background: #3d8168;
+  margin-top: 2rem;
   border: 0;
   font-family: inherit;
   font-weight: 600;
-  border-radius: 3px;
-  padding: 25px 0;
+  border-radius: 10px;
+  padding: 1.2rem 0;
 }
 
 .btn:hover {
   background: #1a4032;
+}
+
+.icon {
+  margin-right: 7px;
+}
+
+/* card */
+
+.card {
+  max-width: 600px;
+  /* border: 1px solid black; */
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.card__img {
+  width: 100%;
+}
+
+.card__body {
+  padding: 2rem;
+  background: #fff;
+}
+
+.card__name {
+  letter-spacing: 3px;
+  font-weight: 200;
+}
+
+.card__price {
+  display: flex;
+}
+
+.price {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.old__price s {
+  align-self: center;
+}
+
+/* Grid */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto 1fr;
+}
+
+@media screen and (min-width: 568px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
 }
